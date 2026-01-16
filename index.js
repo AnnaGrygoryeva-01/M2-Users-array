@@ -7,3 +7,22 @@ const users = [
   { name: "Emily", age: 27, isMale: false },
   { name: "Tom", age: 35, isMale: true },
 ];
+
+// function olderThan(number) {
+//   const newAgeList = users
+//     .filter((user) => {
+//       return user.hasOwnProperty("age") && user.age > number;
+//     })
+//     .sort((a, b) => a.age - b.age);
+//   return newAgeList;
+// }
+
+// or
+
+function olderThan(number) {
+  return users
+    .filter((u) => u.hasOwnProperty("age") && u.age > number)
+    .sort((a, b) => a.age - b.age);
+}
+
+console.log(olderThan(20));
